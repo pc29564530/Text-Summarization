@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} - TextSummarization</title>
+    <style>
+        nav a {
+            color:#d64161;
+            font-size:3em;
+            margin-left:50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('main')}}"> Text Summarization</a>
+        <a href="{{url_for('about')}}">About</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} 
+        <div style="  padding-top: 10px;
+        height: 80vh;
+        display: flex;
+        justify-content: space-around; " id="form">
+            <div style="  width: 40%;
+            height: 100%; " id="first_div">
+                <form style=" height: 100%; "id="form1" method="POST" action="/">
+                    <div style="  height: 80%; " id="text">
+                        <textarea style="  height: 100%;
+                        width: 100%;
+                        border: 5px solid rosybrown;
+                        border-radius: 15px;
+                        background-color: antiquewhite; "id="text1" name="article" id="article"></textarea>
+                    </div>
+                    <div style="  display: flex;
+                    /* border: 2px solid greenyellow; */
+                    height: 10%;
+                    margin-top: 25px;
+                    justify-content: center;
+                    align-items: center; " id="buttons">
+                        <input style="height: 80%;
+                        margin: 10px;
+                        border: 2px solid rosybrown;
+                        background-color: antiquewhite;
+                        border-radius: 15px;
+                        cursor: pointer;" type="submit" class="btn"  name="action1" value="KMEANS" id="button1" />
+                        <input style="height: 80%;
+                        margin: 10px;
+                        border: 2px solid rosybrown;
+                        background-color: antiquewhite;
+                        border-radius: 15px;
+                        cursor: pointer;"type="submit" class="btn" name="action3" value="BERT" id="button2" />
+                        <!-- <input style="height: 80%;
+                        margin: 10px;
+                        border: 2px solid rosybrown;
+                        background-color: antiquewhite;
+                        border-radius: 15px;
+                        cursor: pointer;"type="submit" class="btn" name="action3" value="BERT_API" id="button3" /> -->
+        
+                    </div>
+                </form>
+            </div>
+            <div style=" width: 40%; " id="second_div">
+                <form style=" height: 100%; " id="form2">
+                    <!-- <h2>Summary</h2> -->
+                    <div style=" height: 80%;" id="txt">
+                        <textarea style="height: 100%;
+                        width: 100%;
+                        border: 5px solid rosybrown;
+                        border-radius: 15px;
+                        background-color: antiquewhite;" id="text2" name="result" id="result">{{result}}</textarea>
+                    </div>
+                </form>
+        
+            </div>
+        </div> 
+        {% endblock %}
+    </div>
+</body>
+</html>
