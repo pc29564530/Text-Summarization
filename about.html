@@ -1,0 +1,113 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <header style=" margin: 10px 10px; background: antiquewhite; border: 2px solid rosybrown; border-radius:20px; text-align:center; ">
+        <h1>{% block title %} About {% endblock %} </h1>
+    </header>
+    <section style="  height: 70vh; display: flex; justify-content: center; align-items: center; ">
+        <div style=" padding: 20px 20px;
+        border: 2px solid rosybrown;
+        border-radius: 10px;
+        background-color: antiquewhite;
+        height: 50%;
+        width: 50%;
+        text-align: center; ">
+            <h2>Final Year Project</h2>
+            <table style="width:100%;  border: 2px solid black;
+            padding: 5px 5px;
+            font-size: 20px; ">
+                <tr>
+                    <th>Name</th>
+                    <th>Enrolment No.</th>
+                    <th>Supervisor</th>
+                </tr>
+                <tr>
+                    <td>Pawan Kumar</td>
+                    <td>2018-333-049</td>
+                    <td>Zeeshan Ali Haq</td>
+                </tr>
+                <tr>
+                    <td>Ujjawal Singhal</td>
+                    <td>2018-333-061</td>
+                    <td>Samia Khan</td>
+                </tr>
+            </table>
+            
+        </div>
+    </section>
+    {% endblock %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<style>
+    body{
+        background-color: beige;
+    }
+    /* header{
+        border: 2px solid rosybrown;
+        border-radius: 20px;
+        text-align: center;
+        background: antiquewhite;
+        margin: 10px 10px;
+    } */
+    section{
+        /* border: 2px solid red; */
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div{
+        padding: 20px 20px;
+        border: 2px solid rosybrown;
+        border-radius: 10px;
+        background-color: antiquewhite;
+        height: 50%;
+        width: 50%;
+        text-align: center;
+    }
+    table{
+        width: 50%;
+    }
+    table,th,td{
+        
+        border: 2px solid black;
+        padding: 5px 5px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <header>
+        <h1>About</h1>
+    </header>
+    <section>
+        <div>
+            <h2>Final Year Project</h2>
+            <table style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Enrolment No.</th>
+                    <th>Supervisor</th>
+                </tr>
+                <tr>
+                    <td>Pawan Kumar</td>
+                    <td>2018-333-049</td>
+                    <td>Zeeshan Ali Haq</td>
+                </tr>
+                <tr>
+                    <td>Ujjawal Singhal</td>
+                    <td>2018-333-061</td>
+                    <td>Samia Khan</td>
+                </tr>
+            </table>
+            
+        </div>
+    </section>
+</body>
+</html> -->
